@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>SipnSavor</title>
+
+   
+
+    <script>
+      function toggleTheme() {
+        var theme = document.body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
+        document.body.className = theme;
+        localStorage.setItem('theme', theme);
+      }
+  
+      // Sayfa yüklendiğinde tema yükleyin
+      window.onload = function() {
+        var theme = localStorage.getItem('theme');
+        if (theme) {
+          document.body.className = theme;
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Tema değiştirme butonu -->
+  
+
+  <!-- Logo görseli -->
+  <img id="themeIcon" src="img/ampulyanan.jpeg" alt="Theme Icon" style="position: fixed; bottom: 90px; right: 20px; width: 50px; height: auto;">
+    <script>
+      function toggleTheme() {
+    var theme = document.body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
+    document.body.className = theme;
+    localStorage.setItem('theme', theme);
+
+ 
+};
+
+    </script>
+    <script>
+      // Popup gösterme fonksiyonu
+      function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+      }
+    
+      // Popup gizleme fonksiyonu
+      function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+      }
+    
+      
+      // Sayfa yüklendiğinde pop-up'ı otomatik olarak göster ve özel teklifi göster
+       window.onload = function() {
+        showPopup();
+        showSpecialOffer();
+
+        function showPopup() {
+      document.getElementById('popup').style.display = 'block';
+  
+    
+      
+  }
+      };
+      
+      // Sayfa yüklendiğinde pop-up'ı otomatik olarak göster
+
+
+    </script>
+    
+    <div id="popup" class="popup-container">
+      <span class="popup-close" onclick="closePopup()">&times;</span>
+      <h2>Özel Teklif!</h2>
+      <p>SipnSavor'da şimdi %20 indirim fırsatını kaçırmayın!</p>
+    </div>
+    
+    <!--Menü Kısmı Başlangıç-->
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+      <a class="navbar-brand text-white" href="main.html">SipN Savor</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-white" href="main.html">AnaSayfa <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="hakkımızda.html">Hakkımızda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Alcohol&Bites
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text" href="alcohol.html">Alcohol</a>
+              <a class="dropdown-item" href="bites.html">Bites</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="ekstra.html">Tools & Enjoy</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="bizeulas.html">Bize Ulaşın</a>
+          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!--Menü kısmı Bitiş-->
+
+    <!--Yukarı Çıkma Oku Başlangıc-->
+
+    <button onclick="topFunction()" id="scrollTopBtn" title="Sayfanın başına git">&#8679;</button>
+
+<script>
+// Sayfanın en üstüne gitmek için bir fonksiyon oluşturalım
+function topFunction() {
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; // Diğer tarayıcılar için
+}
+</script>
+
+    <!--Yukarı Çıkma Oku Bitiş-->
+    
+      <!--Bilgilendirme Kısmı Başlangıç-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 brand-intro" style="margin-top: 40px;">
+            <img src="img/Black and White Vintage Beer Festival Badge Logo (200 x 100 piksel).png" alt="SipN Savor Logo" width="200" height="100">
+            <h1>SipN Savor</h1>
+            <!-- Metni göster/gizle butonu -->
+    <button onclick="toggleVisibility('brandIntro')" style="margin: 10px;">Göster/Gizle</button>
+
+    <!-- Gösterilecek veya gizlenecek kısım -->
+    <div id="brandIntro" class="hidden"> <!-- Başlangıçta gizli -->
+      <h2>Kusursuz Yudumlar, Unutulmaz Lezzetler</h2>
+    </div>
+
+    <!-- JavaScript için sarmalayıcı -->
+    <script>
+      function toggleVisibility(elementId) {
+        var element = document.getElementById(elementId); // Elemanı getir
+        if (element.classList.contains('hidden')) { // Eğer gizliyse göster
+          element.classList.remove('hidden');
+        } else { // Yoksa gizle
+          element.classList.add('hidden');
+        }
+      }
+    </script>
+            
+          </div>
+        
+      
+      <!--Bilgilendirme Kısmı Bitiş-->
+
+      
+      
+
+
+      <!-- İçerik Kısmı Başlangıç -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 mb-4 product-container">
+      <!-- Bu bağlantı içinde her şey bulunur -->
+      <a href="https://en.wikipedia.org/wiki/The_Macallan_distillery" target="_blank" class="product-link">
+        <div class="product-image">
+          <!-- Görseli buraya yerleştir -->
+          <img src="img/main.webp" alt="Ürün 1" width="250" height="250">
+          <div class="product-overlay"></div>
+          <div class="product-info">
+            <p>Macallan 18 Yıllık Şeri Fıçı İskoç Viski</p>
+            <p>Fiyat: $280,68</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+      <div class="col-md-4 mb-4 product-container">
+        <a href="https://veviski.com/lagavulin-1991-31-year-old/" target="_blank" class="product-link">
+              <div class="product-image">
+                  <img src="img/Lagavulin-16.jpg" alt="Ürün 2" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Lagavulin 16 Yıllık İskoç Viski</p>
+                      <p>Fiyat: $141,90</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 mb-4 product-container">
+          <a href="https://tr.wikipedia.org/wiki/Vanilyalı_dondurma" class="product-link">
+              <div class="product-image">
+                  <img src="img/vanilyali-dondurma-13ea8c19-22b2-48b9-8ee8-8f7038686e2f.jpeg" alt="Ürün 3" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Mado Vanilyalı Dondurma</p>
+                      <p>Fiyat: $8,33</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 mb-4 product-container">
+          <a href="urun4.html" class="product-link">
+              <div class="product-image">
+                  <img src="img/5024576054408-mybottleshop-001.jpg" alt="Ürün 4" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Appleton Estate 21 Yıllık Jamaika Rom</p>
+                      <p>Fiyat: $77,90</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 mb-4 product-container">
+          <a href="urun5.html" class="product-link">
+              <div class="product-image">
+                  <img src="img/NGXJE6425_arh115_f4j4xDKpux9Fdfo2RVuHDthmYgrXcPWNG.png" alt="Ürün 5" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Aroha Bademli Bitter Çikolata - %72 Kakao</p>
+                      <p>Fiyat: $13,50</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 mb-4 product-container">
+          <a href="urun6.html" class="product-link">
+              <div class="product-image">
+                  <img src="img/istockphoto-1203727592-612x612.jpg" alt="Ürün 6" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Mavi Peynir</p>
+                      <p>Fiyat: $10</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 mb-4 product-container">
+          <a href="urun7.html" class="product-link">
+              <div class="product-image">
+                  <img src="img/cheesecake.jpeg" alt="Ürün 7" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Frambuazlı Cheesecake</p>
+                      <p>Fiyat: $7,00</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 mb-4 product-container">
+          <a href="urun8.html" class="product-link">
+              <div class="product-image">
+                  <img src="img/clase-azul-reposado-tequila-p922-23649_image.jpg" alt="Ürün 8" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Clase Azul Reposado Tekila</p>
+                      <p>Fiyat: $124,65</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+      <div class="col-md-4 mb-4 product-container">
+          <a href="urun9.html" class="product-link">
+              <div class="product-image">
+                  <img src="img/45420-0w0h0_Tequila_Silver_Patron.jpg" alt="Ürün 9" width="250" height="250">
+                  <div class="product-overlay"></div>
+                  <div class="product-info">
+                      <p>Patron Anejo Tekila</p>
+                      <p>Fiyat: $86,24</p>
+                  </div>
+              </div>
+          </a>
+      </div>
+  </div>
+</div>
+<!-- İçerik Kısmı Bitiş -->
+
+
+      <!--Footer Kısmı Başlangıç-->
+
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center text-lg-left mb-3 mb-lg-0">
+              <p class="mb-0">&copy; 2024 SipN Savor Tüm Hakları Saklıdır</p>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/SipnSavor_35">
+                    <img src="img/1690643777twitter-x logo-png-white.png" alt="Twitter X Logo" width="15" height="15"style="margin-top: -4px;">
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/profile.php?id=61557040210695">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="social-link rounded-circle text-white" href="https://www.instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+      
+      
+
+      <!--Footer Kısmı Bitiş-->
+     
+      <button id="themeButton" onclick="toggleTheme()" style="position: fixed; bottom: 20px; right: 20px;"><img src="img/ampulsonen.png" alt="Ampul Icon" width="30" height="30"></button>
+      <script>
+        $(document).ready(function() {
+            var $button = $('#themeButton');
+            // Butonun arka plan görselini ampul.png olarak ayarlayalım
+            $button.css({
+                'background-image': 'url("ampul.png")'
+            });
+        });
+    </script>
+    
+    
+
+      <button onclick="changeFont()" style="position: fixed; bottom: 70px; right: 20px;">Fontu Değiştir</button>
+      <script>
+        function changeFont() {
+    var elements = document.getElementsByTagName('*'); // Tüm HTML elementlerini seç
+
+    for (var i = 0; i < elements.length; i++) { // Her bir elementi kontrol et
+        var element = elements[i];
+        var computedStyle = window.getComputedStyle(element); // Elementin hesaplanmış stilini al
+
+        // Eğer elementin yazı tipi değeri 'sans-serif' ise 'Arial' olarak değiştir
+        if (computedStyle.fontFamily === 'sans-serif') {
+            element.style.fontFamily = 'Arial, sans-serif';
+        } else { // Değilse 'sans-serif' olarak değiştir
+            element.style.fontFamily = 'sans-serif';
+        }
+    }
+}
+
+      </script>
+     
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

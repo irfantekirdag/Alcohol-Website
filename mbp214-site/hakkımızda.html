@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="img/Black and White Vintage Beer Festival Badge Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/Black and White Vintage Beer Festival Badge Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="hakkımızda.css">
+    <title>SipnSavor</title>
+
+    <script>
+      function toggleTheme() {
+        var theme = document.body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
+        document.body.className = theme;
+        localStorage.setItem('theme', theme);
+      }
+  
+      // Sayfa yüklendiğinde tema yükleyin
+      window.onload = function() {
+        var theme = localStorage.getItem('theme');
+        if (theme) {
+          document.body.className = theme;
+        }
+      };
+    </script>
+
+  </head>
+  <body>
+
+    <!--Yukarı Çıkma Oku Başlangıc-->
+
+    <button onclick="topFunction()" id="scrollTopBtn" title="Sayfanın başına git">&#8679;</button>
+
+<script>
+// Sayfanın en üstüne gitmek için bir fonksiyon oluşturalım
+function topFunction() {
+  document.body.scrollTop = 0; // Safari
+  document.documentElement.scrollTop = 0; // Diğer tarayıcılar için
+}
+</script>
+
+    <!--Yukarı Çıkma Oku Bitiş-->
+    <!--Menü Kısmı Başlangıç-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+        <a class="navbar-brand text-white" href="main.html">SipN Savor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href=main.html>AnaSayfa <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="hakkımızda.html">Hakkımızda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Alcohol&Bites
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="alcohol.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="bites.html">Bites</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="ekstra.html">Tools & Enjoy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="bizeulas.html">Bize Ulaşın</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <!--Menü kısmı Bitiş-->
+    
+      <!--Bilgilendirme Kısmı Başlangıç-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 brand-intro" style="margin-top: 40px;">
+            <img src="img/Black and White Vintage Beer Festival Badge Logo (200 x 100 piksel).png" alt="SipN Savor Logo" width="200" height="100">
+            <h1>SipN Savor</h1>
+            <h2>Kusursuz Yudumlar, Unutulmaz Lezzetler</h2>
+            <p>SipN Savor, size dünyanın en seçkin içkilerini ve eşsiz tatları sunmak için kuruldu. Kaliteli ürün yelpazemiz ve uzman ekibimizle, içki deneyiminizi bir sonraki seviyeye taşımayı hedefliyoruz.</p>
+          </div>
+        
+      
+      <!--Bilgilendirme Kısmı Bitiş-->
+
+      <!-- Slider ve Bilgilendirme Kısmı Başlangıç -->
+<section class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Slider Kısmı -->
+        <div class="col-md-6">
+          <div id="sliderExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#sliderExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#sliderExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#sliderExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/yorumfoto.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/yorum3.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/yorum2.jpeg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#sliderExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#sliderExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <!-- Bilgilendirme Kısmı -->
+        <div class="col-md-6" class="py-5 bg-beige">
+          <h3 class="mb-4">Hakkımızda</h3>
+          <p>SipN Savor, dünyanın en seçkin içkilerini ve eşsiz tatları sunmak için kuruldu. Kaliteli ürün yelpazemiz ve uzman ekibimizle, içki deneyiminizi bir sonraki seviyeye taşımayı hedefliyoruz.</p>
+          <p>Farklı kültürlerden gelen içecekleri sizlerle buluşturarak unutulmaz anlar yaşatmayı amaçlıyoruz. Müşterilerimizin memnuniyeti ve güveni bizim için ön planda olduğundan, her zaman kaliteli ürünler ve mükemmel hizmet sunmaya özen gösteriyoruz.</p>
+          <p>Bu nadide ve yüksek kaliteli alkollü içeceklerimizin yanı sıra ürünlerimize özel eşlikçi olarak nitelendirilen gıdalarıda SipN Savor üzerinden websitemiz üzerinden temin edebilir veya İzmir'deki yerimize uğrayarak deneyimleyebilirsiniz. </p>
+          <p>SipN Savor Türkiye'de bir ilki yapıp kendi kargo firması ile 7/24 gönderim de sağlamaktadır.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Slider ve Bilgilendirme Kısmı Bitiş -->
+
+
+  
+  
+     
+  <!-- Müşteri Yorumları Kısmı Başlangıç -->
+<section class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Müşteri Yorumları</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p class="card-text">"Harika bir deneyimdi! Çok kaliteli içkiler ve harika bir ortam. Kesinlikle tekrar geleceğim!"</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">- Ahmet Yılmaz</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p class="card-text">"SipN Savor'da geçirdiğimiz akşam unutulmazdı. Teşekkür ederiz!"</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">- Ayşe Demir</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4">
+            <div class="card-body">
+              <p class="card-text">"Muhteşem bir menü ve mükemmel bir servis. Tavsiye ederim!"</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">- Mehmet Kaya</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Müşteri Yorumları Kısmı Bitiş -->
+  
+<!-- Görsel Yorumlar Kısmı Başlangıç -->
+<section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Görsel Yorumlar</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/goruntuluyorum.jpeg" class="d-block w-100" alt="..." style="max-height: 1000px;">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Harika Atmosfer</h5>
+              <p>"SipN Savor'da geçirdiğimiz akşamı asla unutmayacağız. Mükemmel bir atmosfer ve lezzetli içkiler!"</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/goruntuluyorum1.jpeg" class="d-block w-100" alt="..."style="max-height: 1000px;">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Mükemmel Hizmet</h5>
+              <p>"Personel çok ilgiliydi ve servis mükemmeldi. Kesinlikle tekrar geleceğiz!"</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/goruntuluyorum3.jpeg" class="d-block w-100" alt="..."style="max-height: 1000px;">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Kaliteli İçkiler</h5>
+              <p>"SipN Savor'da bulduğumuz içkilerin kalitesi gerçekten muhteşemdi. Teşekkürler!"</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Görsel Yorumlar Kısmı Bitiş -->
+  
+
+
+
+      <!--Footer Kısmı Başlangıç-->
+
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center text-lg-left mb-3 mb-lg-0">
+              <p class="mb-0">&copy; 2024 SipN Savor Tüm Hakları Saklıdır</p>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/SipnSavor_35">
+                    <img src="img/1690643777twitter-x logo-png-white.png" alt="Twitter X Logo" width="15" height="15"style="margin-top: -4px;">
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/profile.php?id=61557040210695">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item">
+                  <a class="social-link rounded-circle text-white" href="https://www.instagram.com">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+      
+      
+
+      <!--Footer Kısmı Bitiş-->
+
+
+      <button onclick="toggleTheme()" style="position: fixed; bottom: 20px; right: 20px;">Tema Değiştir</button>
+
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

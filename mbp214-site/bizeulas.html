@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Gerekli Meta Etiketleri -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/Black_and_White_Vintage_Beer_Festival_Badge_Logo.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Özel CSS -->
+    <link rel="stylesheet" href="bizeulas.css">
+
+    <title>SipN Savor</title>
+
+    <!-- Tema Değiştirici -->
+    <script>
+      function toggleTheme() {
+        var theme = document.body.classList.contains('dark-theme') ? 'light-theme' : 'dark-theme';
+        document.body.className = theme;
+        localStorage.setItem('theme', theme);
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var theme = localStorage.getItem('theme');
+        if (theme) {
+          document.body.className = theme;
+        }
+      });
+    </script>
+  </head>
+  <body>
+
+    <!-- Sayfa Üstüne Gitme Butonu -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Sayfanın başına git">&#8679;</button>
+
+    <script>
+      function topFunction() {
+        document.body.scrollTop = 0; // Safari
+        document.documentElement.scrollTop = 0; // Diğer tarayıcılar için
+      }
+    </script>
+
+    <!-- Menü -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand text-white" href="main.html">SipN Savor</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="main.html">Ana Sayfa <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="hakkımızda.html">Hakkımızda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Alcohol & Bites
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="alcohol.html">Alcohol</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="bites.html">Bites</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="ekstra.html">Tools & Enjoy</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="bizeulas.html">Bize Ulaşın</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+        <!--Menü bitiş-->
+        
+        
+
+
+        <!--Form Kısmı Başlangıç-->
+
+         <!-- Form Konteyneri -->
+  <div class="form-container">
+
+    <!--TC Kimlik No Doğrulama Başlangıç-->
+
+    <script>
+      function TCNOKontrol(TCNO) {
+        var tek = 0,
+            cift = 0,
+            sonuc = 0,
+            TCToplam = 0,
+            i = 0;
+        if (TCNO.length != 11) return false;
+        if (isNaN(TCNO)) return false;
+        if (TCNO[0] == 0) return false;
+        
+        tek = parseInt(TCNO[0]) + parseInt(TCNO[2]) + parseInt(TCNO[4]) + parseInt(TCNO[6]) + parseInt(TCNO[8]);
+        cift = parseInt(TCNO[1]) + parseInt(TCNO[3]) + parseInt(TCNO[5]) + parseInt(TCNO[7]);
+        
+        tek = tek * 7;
+        sonuc = tek - cift;
+        
+        if (sonuc % 10 != parseInt(TCNO[9])) return false;
+        
+        for (i = 0; i < 10; i++) {
+          TCToplam += parseInt(TCNO[i]);
+        }
+        
+        if (TCToplam % 10 != parseInt(TCNO[10])) return false;
+        
+        return true;
+      }
+
+      function kontrolEt() {
+        var tcNo = document.getElementById("tcNo").value;
+        var sonuc = TCNOKontrol(tcNo);
+        
+        var mesaj = sonuc ? "TC kimlik numarası geçerli." : "TC kimlik numarası geçersiz.";
+        document.getElementById("sonuc").textContent = mesaj;
+      }
+    </script>
+
+
+    <div style="margin-top: 70px;">
+      <label for="tcNo">TC Kimlik Numarası:</label>
+      <input type="text" id="tcNo" maxlength="11" placeholder="11 haneli TC kimlik numarası girin">
+      <button onclick="kontrolEt()">Doğrula</button>
+    </div>
+    
+    <p id="sonuc"></p> <!-- Doğrulama sonucu burada gösterilecektir -->
+
+    <!--TC Kimlik No Doğrulama Bitiş-->
+
+    <form action="https://formspree.io/f/xqkrndry" method="POST">
+      <label>
+        Email Adresiniz:
+        <input type="email" name="email">
+      </label>
+      <br>
+      <label>
+        Mesajınız:
+        <textarea id="messageArea" name="message" rows="5" cols="40" maxlength="150"></textarea> <!-- Karakter Sınırı -->
+      </label>
+      <br>
+      <!-- Kalan karakter sayısını göstermek için paragraf etiketi -->
+      <p id="charCount">Kalan karakter sayısı: 150</p> <!-- Başlangıçta maksimum karakter -->
+      <br>
+      <button type="submit">Send</button>
+    </form>
+
+  </div>
+
+  <script>
+    // 'messageArea' için 'input' olayını dinleyin
+    document.getElementById("messageArea").addEventListener("input", function() {
+      var maxChars = this.maxLength; // Maksimum karakter sayısı
+      var currentChars = this.value.length; // Mevcut karakter sayısı
+      var remainingChars = maxChars - currentChars; // Kalan karakter sayısı
+
+      // Kalan karakter sayısını güncelle
+      document.getElementById("charCount").textContent = "Kalan karakter sayısı: " + remainingChars;
+    });
+  </script>
+        
+
+        <!--Form Kısmı Bitiş-->
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer-dark text-white py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 text-center text-lg-left mb-3 mb-lg-0">
+            <p class="mb-0">&copy; 2024 SipN Savor Tüm Hakları Saklıdır</p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-right">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white" href="https://twitter.com/SipnSavor_35">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white" href="https://www.facebook.com/profile.php?id=61557040210695">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="social-link rounded-circle text-white" href="https://www.instagram.com/">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Tema Değiştirici Butonu -->
+    <button onclick="toggleTheme()" style="position: fixed; bottom: 20px; right: 20px;">Tema Değiştir</button>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

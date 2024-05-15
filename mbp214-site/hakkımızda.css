@@ -1,0 +1,141 @@
+body {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 60px; /* Footer yüksekliği kadar alt boşluk bırak */
+    
+}
+/*.bg-beige {
+    background-color: #e7b153; /* Pastel bir sarı renk */
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #343a40; /* Footer arkaplan rengi */
+    color: #ffffff; /* Footer metin rengi */
+    padding: 20px; /* Footer iç boşlukları */
+}
+
+.product-container {
+    background-color: rgba(128, 128, 128, 0.1); /* Ürünlerin arka plan rengi ve opaklığı */
+    padding: 10px;
+    margin-bottom: 20px; /* Ürünler arasındaki boşluk */
+}
+
+    
+      .product-link {
+        position: relative;
+      }
+      
+      .product-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Gri alanın rengi ve opaklığı */
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .product-link:hover .product-overlay {
+        opacity: 1;
+      }
+      
+      .product-info {
+        position: absolute;
+        bottom: -50px; /* Başlangıçta görünmez */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 10px;
+        transition: bottom 0.3s ease;
+    }
+    
+    .product-link:hover .product-info {
+        bottom: 0; /* Hover edildiğinde görünür hale gelir */
+    }
+    
+      
+      .product-link:hover .product-info {
+        opacity: 1;
+      }
+      .product-image {
+        position: relative;
+        overflow: hidden;
+        width: 250px; /* Gerekirse genişliği ayarlayın */
+        height: 250px; /* Gerekirse yüksekliği ayarlayın */
+        border: 3px solid #fff; /* Kenarlık rengi */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+        transition: all 0.3s ease;
+    }
+    
+    .product-image:hover {
+        transform: translateY(-5px); /* Hover efekti: Görsel yukarı doğru kayar */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Gölge efekti artırılır */
+    }
+
+    .brand-intro {
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      
+      .brand-intro h1, .brand-intro h2 {
+        margin-bottom: 10px;
+      }
+      
+      .brand-intro p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .dark-theme {
+        background-color: #343a40; /* Arka plan rengi */
+        color: #ffffff; /* Metin rengi */
+    }
+    
+    .navbar-dark .navbar-brand, .navbar-dark .navbar-nav .nav-link {
+        color: #ffffff !important; /* Navbar metin rengi */
+    }
+    
+    .navbar-dark .navbar-toggler-icon {
+        background-color: #ffffff; /* Navbar açılır menü simgesi rengi */
+    }
+    
+    .navbar-dark .navbar-toggler {
+        border-color: #ffffff; /* Navbar açılır menü simgesi kenarlık rengi */
+    }
+    
+    .footer-dark {
+        background-color: #343a40; /* Footer arka plan rengi */
+        color: #ffffff; /* Footer metin rengi */
+    }
+      
+    
+    #scrollTopBtn {
+      /* display: none; */ /* Bu satırı yorum haline getirin veya silin */
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      z-index: 99;
+      font-size: 20px;
+      border: none;
+      outline: none;
+      background-color: rgb(32, 38, 45);
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    
+    #scrollTopBtn:hover {
+      background-color: #0056b3; /* Üzerine gelindiğinde arka plan rengi değişir */
+    } 
+      
+      
